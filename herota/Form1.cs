@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace herota
 {
@@ -42,7 +43,12 @@ namespace herota
 
         private void button2_Click(object sender, EventArgs e)
         {
-            pictureBox1.ImageLocation = System.IO.Path.GetFullPath("..\\IMG\\" + "lol.png");
+
+            string PAT = AppDomain.CurrentDomain.BaseDirectory;
+            PAT = PAT + "\\IMG\\" + "lol.png";
+            pictureBox1.ImageLocation = PAT;
+
+
         }
     }
 }
